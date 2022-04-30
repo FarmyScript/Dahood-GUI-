@@ -1,3 +1,8 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+
+
 ModIDs = {
 247024457, -- aliW#9824 (creator)-- 
 620763069, -- tay
@@ -89,11 +94,12 @@ local success, err = pcall(function()
     end
 end)
 
+if game.Players.LocalPlayer.Character.Humanoid.Health <= 5 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/FarmyScript/Dahood-GUI-/main/Antistomp.lua'))()
+    end
+
+
 return ModIDs, OwnerIDs, FreeIDs
-
-
-
-
 
 
 
