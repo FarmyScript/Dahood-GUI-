@@ -89,7 +89,7 @@ local success, err = pcall(function()
     end
 end)
 
-return ModIDs and OwnerIDs and FreeIDs
+return ModIDs, OwnerIDs, FreeIDs
 
 
 
