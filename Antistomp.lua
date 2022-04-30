@@ -42,6 +42,7 @@ FreeIDs = {
     1608108551,
     694635469,
     1428375786,
+    2294275078,
 
 }
 
@@ -59,7 +60,7 @@ _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
 
-
+function Emojis()
 local success, err = pcall(function()
     for i,v in pairs(game.Players:GetChildren()) do
         if v.Character then
@@ -71,7 +72,6 @@ local success, err = pcall(function()
         end
     end
 end)
-
 
 local success, err = pcall(function()
     for i,v in pairs(game.Players:GetChildren()) do
@@ -94,12 +94,12 @@ local success, err = pcall(function()
             if table.find(OwnerIDs,v.UserId) then
                 v.Character.Humanoid.DisplayName = "[👑]"..v.DisplayName
                   elseif not v.Character.Head:FindFirstChild("OriginalSize") then
-                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
+                print("hi")
             end
         end
     end
 end)
-
+end
 
 
 
@@ -127,47 +127,8 @@ end)
 
 
 Players.PlayerAdded:Connect(function(player)
-	local success, err = pcall(function()
-    for i,v in pairs(game.Players:GetChildren()) do
-        if v.Character then
-            if table.find(ModIDs,v.UserId) then
-                v.Character.Humanoid.DisplayName = "[⭐]"..v.DisplayName
-            elseif not v.Character.Head:FindFirstChild("OriginalSize") then
-                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
-            end
-        end
-    end
+	Emojis()
 end)
-
-
-local success, err = pcall(function()
-    for i,v in pairs(game.Players:GetChildren()) do
-        if v.Character then
-            if table.find(FreeIDs,v.UserId) then
-                v.Character.Humanoid.DisplayName = "[😎]"..v.DisplayName
-                    elseif not v.Character.Head:FindFirstChild("OriginalSize") then
-                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
-            end
-        end
-    end
-end)
-
-
-
-
-local success, err = pcall(function()
-    for i,v in pairs(game.Players:GetChildren()) do
-        if v.Character then
-            if table.find(OwnerIDs,v.UserId) then
-                v.Character.Humanoid.DisplayName = "[👑]"..v.DisplayName
-                  elseif not v.Character.Head:FindFirstChild("OriginalSize") then
-                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
-            end
-        end
-    end
-end)
-end)
-
 
 return ModIDs, OwnerIDs, FreeIDs
 
