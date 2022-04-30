@@ -96,7 +96,7 @@ local success, err = pcall(function()
     end
 end)
 
-if game.Players.LocalPlayer.Character.Humanoid.Health <= 5 then
+if game.Players.LocalPlayer.Character.Humanoid.Health <= 35 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/FarmyScript/Dahood-GUI-/main/Antistomp.lua'))()
     end
 
