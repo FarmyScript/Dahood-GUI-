@@ -12,6 +12,26 @@ ModIDs = {
 
 
 
+FreeIDs = {
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    123,
+    
+    
+    
+    
+    
+
+}
+
+
+
+
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
@@ -35,8 +55,19 @@ local success, err = pcall(function()
         end
     end
 end)
-return ModIDs
 
+
+local success, err = pcall(function()
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.Character then
+            if table.find(FreeIDs,v.UserId) then
+                v.Character.Humanoid.DisplayName = "[😎]"..v.DisplayName
+            end
+        end
+    end
+end)
+return ModIDs
+return FreeIDs
 
 
 
