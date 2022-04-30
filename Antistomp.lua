@@ -3,7 +3,6 @@ local Players = game:GetService("Players")
 
 
 ModIDs = {
-247725763, -- aliW#9824 (creator)-- 
 620763069, -- tay
 3492773679, -- player
 245916566, -- tay
@@ -15,8 +14,9 @@ ModIDs = {
 
 
 OwnerIDs = {
-    --247725763,
     2841715269,
+    247725763,
+    123,
 }
 
 
