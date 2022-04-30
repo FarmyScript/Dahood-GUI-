@@ -67,6 +67,8 @@ local success, err = pcall(function()
         if v.Character then
             if table.find(FreeIDs,v.UserId) then
                 v.Character.Humanoid.DisplayName = "[😎]"..v.DisplayName
+                    elseif not v.Character.Head:FindFirstChild("OriginalSize") then
+                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
             end
         end
     end
@@ -80,12 +82,14 @@ local success, err = pcall(function()
         if v.Character then
             if table.find(OwnerIDs,v.UserId) then
                 v.Character.Humanoid.DisplayName = "[👑]"..v.DisplayName
+                  elseif not v.Character.Head:FindFirstChild("OriginalSize") then
+                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
             end
         end
     end
 end)
 
-return ModIDs and FreeIDs and OwnerIDs
+return ModIDs and OwnerIDs and FreeIDs
 
 
 
