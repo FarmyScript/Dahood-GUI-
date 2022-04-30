@@ -1,15 +1,19 @@
 ModIDs = {
-247024457, -- aliW#9824 (creator)
-2841715269, -- zaterpater#4546 (developer)
+247024457, -- aliW#9824 (creator)-- 
 620763069, -- tay
 3492773679, -- player
 245916566, -- tay
-247725763,
 
 
 
 }
 
+
+
+OwnerIDs = {
+    247725763,
+    2841715269,
+}
 
 
 
@@ -67,7 +71,21 @@ local success, err = pcall(function()
         end
     end
 end)
-return ModIDs and FreeIDs
+
+
+
+
+local success, err = pcall(function()
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.Character then
+            if table.find(OwnerIDs,v.UserId) then
+                v.Character.Humanoid.DisplayName = "[👑]"..v.DisplayName
+            end
+        end
+    end
+end)
+
+return ModIDs and FreeIDs and OwnerIDs
 
 
 
