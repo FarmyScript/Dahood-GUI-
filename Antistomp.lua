@@ -183,8 +183,8 @@ Emojis()
 
 
 Players.PlayerAdded:Connect(function(player)
-	Emojis()
 	names()
+	Emojis()
 end)
 
 return ModIDs, OwnerIDs, FreeIDs
