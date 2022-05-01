@@ -102,7 +102,7 @@ FreeIDs = {
 3410658096,
 }
 end
-
+names()
 
 
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
@@ -184,6 +184,7 @@ Emojis()
 
 Players.PlayerAdded:Connect(function(player)
 	Emojis()
+	names()
 end)
 
 return ModIDs, OwnerIDs, FreeIDs
