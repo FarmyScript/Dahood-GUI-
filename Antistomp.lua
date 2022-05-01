@@ -3,9 +3,9 @@ local Players = game:GetService("Players")
 
 function names()
 ModIDs = {
-620763069, -- tay
-3492773679, -- player
+
 245916566, -- tay
+3492773679,  -- player
 
 
 
