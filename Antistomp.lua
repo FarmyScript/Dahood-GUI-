@@ -5,20 +5,13 @@ ModIDs = {
 
 245916566, -- tay
 3492773679,  -- player
+2841715269,
+247725763,
+123,
 
 
 
 }
-
-
-
-OwnerIDs = {
-    2841715269,
-    247725763,
-    123,
-}
-
-
 
 
 
@@ -79,7 +72,7 @@ end)
 
 
 
-return ModIDs, OwnerIDs
+return ModIDs
 
 
 
