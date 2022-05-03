@@ -1,5 +1,3 @@
-local Players = game:GetService("Players")
-
 
 ModIDs = {
 
